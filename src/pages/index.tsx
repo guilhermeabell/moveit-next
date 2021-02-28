@@ -2,7 +2,7 @@ import { ExperienceBar } from "../components/ExperienceBar";
 import { Profile } from "../components/Profile";
 import { CompleteChallenge } from "../components/CompleteChallenge";
 
-import styles from '../styles/pages/home.module.css';
+import styles from '../styles/pages/Home.module.css';
 import { Countdown } from "../components/Countdown";
 
 import Head from 'next/head';
