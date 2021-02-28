@@ -5,9 +5,15 @@ import { CompleteChallenge } from "../components/CompleteChallenge";
 import styles from '../styles/pages/home.module.css';
 import { Countdown } from "../components/Countdown";
 
+import Head from 'next/head';
+
 export default function Home() {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Inicio | move.it</title>
+       </Head> 
+
       <ExperienceBar />
       
       <section>
