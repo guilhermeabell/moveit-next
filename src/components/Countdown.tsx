@@ -5,7 +5,8 @@ let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
   const [time, setTime] = useState(25 * 60);
-  const [isActive, setIsActive] = useState(false); 
+  const [isActive, setIsActive] = useState(false);
+  const [hasFinished, setHasFinished] = useState(false);
   
   const minutes = Math.floor(time / 60);
 
@@ -29,7 +30,11 @@ export function Countdown() {
      countdownTimeout = setTimeout(() => {
         setTime(time -1);
       }, 1000); 
+    } else if  (isActive && time === 0) {
+      setHasFinished(true)
+      setIsActive(false);
     }
+    
   }, [isActive, time])
 
   return (
@@ -46,7 +51,16 @@ export function Countdown() {
       </div>
     </div>
 
-    { isActive ? ( 
+    { hasFinished ? (
+      <button
+      disabled 
+      className={styles.countdownButton} 
+      >
+        Ciclo encerrado
+     </button>
+    ) : (
+      <>
+      { isActive ? ( 
     <button type="button"
      className={`${styles.countdownButton} ${styles.countdownButtonActive}`} 
      onClick={resetCountdown}
@@ -58,7 +72,9 @@ export function Countdown() {
      className={styles.countdownButton} onClick={StartCountdown}>
        Iniciar um ciclo
     </button>
-    ) }
+    ) } 
+      </>
+    )}
     </div>
   );
 }
