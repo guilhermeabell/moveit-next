@@ -1,0 +1,21 @@
+.countdownContainer {
+  display: flex;
+  align-items: center;
+  font-family: Rajdhani;
+  font-weight: 600;
+  color: var(--title);
+}
+
+.countdownContainer > div {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background: var(--white);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-size: 8.5rem;
+  text-align: center;
+}
