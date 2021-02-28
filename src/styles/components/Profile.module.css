@@ -3,7 +3,7 @@
   align-items: center;
 }
 
-.profileContainer > img {
+.profileContainer>img {
   width: 5.5rem;
   height: 5.5rem;
   border-radius: 50%;
