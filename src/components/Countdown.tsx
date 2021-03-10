@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from '../styles/components/Countdown.module.css';
 
-
 let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
